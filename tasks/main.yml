@@ -1,6 +1,6 @@
 ---
 - name: ensure epel is installed
-  package: name=epel state=latest
+  package: name=epel-release state=latest
   when: ansible_os_family == 'RedHat'
 
 - name: ensure fail2ban is installed
