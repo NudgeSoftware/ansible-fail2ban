@@ -10,7 +10,7 @@
 
 - name: ensure fail2ban is configured
   template: src={{ item }}.j2 dest=/{{ item }}
-  with_items:
+  loop:
     - etc/fail2ban/jail.local
     - etc/fail2ban/fail2ban.local
   notify:
