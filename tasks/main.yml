@@ -1,10 +1,10 @@
 ---
 - name: ensure epel is installed
-  package: name=epel-release state=latest
+  yum: name=epel-release state=latest
   when: ansible_os_family == 'RedHat'
 
 - name: ensure fail2ban is installed
-  package: name=fail2ban state=latest
+  yum: name=fail2ban state=latest
   notify:
     - restart fail2ban
 
